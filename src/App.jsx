@@ -11,6 +11,8 @@ function App() {
     <div id="body">
       <MainForecast></MainForecast>
       <OtherForecast></OtherForecast>
+
+      
     </div>
   )
 }

@@ -1,4 +1,8 @@
 #otherforecast{
+  display:flex;
+  flex:3;
   background-color: aliceblue;
   color:black;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }

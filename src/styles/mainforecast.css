@@ -1,11 +1,92 @@
-#mainforecast{
- background-color: rgb(235, 235, 235);
- display:flex;
- flex-direction: column;
- margin:0;
- padding:10px 10px 10px 10px;
- color:black;
+#mainforecast {
+  background-color: rgb(235, 235, 235);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 0;
+  padding: 10px 10px 10px 10px;
+  color: black;
+  font-family: poppins;
+  font-weight: 500;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 85vh;
 }
-#sky-icon img{
-  width:100px;
+
+#search {
+  display: flex;
+  justify-content: center;
+  margin: 20px 10px 60px 0px;
+}
+
+#search img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+#search input {
+  font-size: 16px;
+  background: transparent;
+  width: 150px;
+  outline: none;
+  border: none;
+  color: black;
+}
+
+#search input::placeholder {
+  font-family: poppins;
+}
+
+#sky-icon img {
+  width: 120px;
+  margin-bottom: 30px;
+  margin-top:-20px;
+}
+
+#temperature {
+  font-size: 70px;
+  font-weight: 300;
+}
+
+#temperature sup {
+  font-size: 30px;
+}
+
+#date {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top:-20px;
+  margin-bottom:10px;
+}
+
+#date p:nth-child(2) {
+  color: gray;
+}
+
+#weather {
+  display: flex;
+  margin-left:-50px;
+  justify-content: center;
+  gap: 10px;
+}
+
+#weather img {
+  width: 30px;
+}
+
+#rain {
+  display: flex;
+  margin-left:-80px;
+  justify-content: center;
+  gap: 15px;
+  margin-top:-20px;
+}
+
+#rain img {
+  width: 20px;
+}
+#cityName{
+  margin-top:-20px;
+  font-size:20px;
 }

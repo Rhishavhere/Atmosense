@@ -8,12 +8,10 @@ function App() {
 
 
   return (
-    <>
     <div id="body">
       <MainForecast></MainForecast>
       <OtherForecast></OtherForecast>
     </div>
-    </>
   )
 }
 

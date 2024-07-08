@@ -1,29 +1,34 @@
 import '../styles/mainforecast.css'
-// import '../images/sun and rain.svg'
+
+
+
 export default function MainForecast(){
   return(
     <div id="mainforecast"> 
     <div id="search">
-      <button>Search for a City</button>
+      <img src={'search-button.svg'} alt="" />
+      <input type="text" placeholder="Search For A City"/>
     </div>
     <div id="sky-icon">
       <img src={'sun and rain.svg'} alt="" />
     </div>
-    <div id="temperature">
-      12 C
+    <div id="cityName">
+      <p>New York, NY, USA</p>
     </div>
-    <div>
+    <div id="temperature">
+      12<sup>&deg;C</sup>
+    </div>
+    <div id="date">
       <p>Monday,</p>
       <p>16:00</p>
     </div>
-    <div>
+    <div id="weather">
+      <img src={"cloud.svg"} alt="" />
       <p>Mostly Cloudy</p>
     </div>
-    <div>
+    <div id="rain">
+      <img src={"water.svg"} alt="" />
       <p>Rain-30%</p>
-    </div>
-    <div>
-      <p>New York, NY, USA</p>
     </div>
     </div>
   )

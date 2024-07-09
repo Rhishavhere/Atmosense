@@ -1,11 +1,21 @@
 import '../styles/mainforecast.css'
 import { useState } from 'react';
 
-export default function MainForecast({temp,update}){
+export default function MainForecast({temp,update,sky,location,time}){
   const [currCity,setCity]=useState(null);
   const searchClick=()=>{
     update(currCity);
   };
+
+  let date=new Date(time)
+  let dayIndex=date.getDay()
+  const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  let day=daysOfWeek[dayIndex]
+ 
+
+  let hours=date.getHours()
+  let minutes=date.getMinutes()
+
 
   return(
     <div id="mainforecast"> 
@@ -22,19 +32,19 @@ export default function MainForecast({temp,update}){
       {temp}<sup>&deg;C</sup>
     </div>
     <div id="date">
-      <p>Monday,</p>
-      <p>16:00</p>
+      <p>{day}</p>
+      <p>{hours} : {minutes}</p>
     </div>
     <div id="weather">
       <img src={"cloud.svg"} alt="" />
-      <p>Mostly Cloudy</p>
+      <p>{String(sky).toUpperCase()}</p>
     </div>
     <div id="rain">
       <img src={"water.svg"} alt="" />
       <p>Rain-30%</p>
     </div>
     <div id="cityName">
-      <p>New York</p>
+      <p>{location}</p>
       <img src={"pin.svg"} alt="" />
     </div>
     </div>

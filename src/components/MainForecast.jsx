@@ -1,13 +1,21 @@
 import '../styles/mainforecast.css'
-
+import { useState } from 'react';
 
 
 export default function MainForecast(){
+
+  const[city,setCity]=useState('');
+
+  const handleCityChange=(event)=>{
+    setCity(event.target.value)
+    console.log=city;
+  }
+
   return(
     <div id="mainforecast"> 
     <div id="search">
       <img src={'search-button.svg'} alt="" />
-      <input type="text" placeholder="Search For A City"/>
+      <input type="text" onClick={handleCityChange} placeholder="Search For A City"/>
     </div>
     <div id="sky-icon">
       <img src={'sun and rain.svg'} alt="" />

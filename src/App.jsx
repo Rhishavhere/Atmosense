@@ -24,6 +24,9 @@ function App() {
 
     setWeather({
 
+      lat:data.latitude,
+      lon:data.longitude,
+      timezone:data.timezone,
       address: data.resolvedAddress,
       temp: data.currentConditions.temp,
       sky: data.currentConditions.conditions,
@@ -36,12 +39,44 @@ function App() {
       windDir: data.currentConditions.winddir,
       humidity: data.currentConditions.humidity,
       pressure: data.currentConditions.pressure,
+      sunrise: data.currentConditions.sunrise,
+      sunset: data.currentConditions.sunset,
+      feelslike: data.currentConditions.feelslike,
+
+      icon:data.currentConditions.icon,
+
+      day1max:data.days[1].tempmax,
+      day2max:data.days[2].tempmax,
+      day3max:data.days[3].tempmax,
+      day4max:data.days[4].tempmax,
+      day5max:data.days[5].tempmax,
+      day6max:data.days[6].tempmax,
+      day7max:data.days[7].tempmax,
+
+      day1min:data.days[1].tempmin,
+      day2min:data.days[2].tempmin,
+      day3min:data.days[3].tempmin,
+      day4min:data.days[4].tempmin,
+      day5min:data.days[5].tempmin,
+      day6min:data.days[6].tempmin,
+      day7min:data.days[7].tempmin,
+
+      day1icon:data.days[1].icon,
+      day2icon:data.days[2].icon,
+      day3icon:data.days[3].icon,
+      day4icon:data.days[4].icon,
+      day5icon:data.days[5].icon,
+      day6icon:data.days[6].icon,
+      day7icon:data.days[7].icon,
+
+      day1:new Date(data.days[1].datetimeEpoch).getDay(),
+      
+    
 
 
     });
 
   };
-
   useEffect(() => {
     // console.log(searchCity);
     search();

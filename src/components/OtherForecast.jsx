@@ -7,7 +7,7 @@ export default function OtherForecast(props){
   return(
     <div id="otherforecast">
     <Header></Header>
-    <TopSection></TopSection>
+    <TopSection {...props}></TopSection>
     <h4>Today's Highlights</h4>
     <BottomSection {...props}></BottomSection>
 

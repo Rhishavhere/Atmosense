@@ -1,8 +1,11 @@
 import '../styles/mainforecast.css'
 import { useState } from 'react';
 
-export default function MainForecast({temp,update,sky,address,time,rain}){
+export default function MainForecast({temp,update,sky,
+  address,time,rain,icon
+}){
   const [currCity,setCity]=useState(null);
+  
   const searchClick=()=>{
     update(currCity);
   };
@@ -26,7 +29,7 @@ export default function MainForecast({temp,update,sky,address,time,rain}){
     </div>
 
     <div id="sky-icon">
-      <img src={'sun and rain.svg'} alt="" />
+      <img src={icon+`.svg`} alt="" />
     </div>
     <div id="temperature">
       {temp}<sup>&deg;C</sup>

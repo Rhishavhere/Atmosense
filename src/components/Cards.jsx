@@ -1,9 +1,9 @@
-export default function Cards(){
+export default function Cards({max,min,icon,day}){
   return(
     <div id="cards">
-      <p>Sun</p>
-      <img src={"sun.svg"} alt="" />
-      <p>15&deg; <span>3&deg;</span></p>
+      <p>{day}</p>
+      <img src={icon+`.svg`} alt="" />
+      <p>{max}&deg; <span>{min}&deg;</span></p>
     </div>
   )
 }

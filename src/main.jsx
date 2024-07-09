@@ -4,9 +4,6 @@ import App from './App.jsx'
 import './styles/index.css'
 
 
-import { getLocation } from './utils/weather.jsx'
-
-getLocation()
 
 
 

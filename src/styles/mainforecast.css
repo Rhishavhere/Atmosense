@@ -18,11 +18,16 @@
   display: flex;
   justify-content: center;
   margin: 20px 10px 60px 0px;
+  height:30px;
+  border-radius:50px;
 }
 
 #search img {
   width: 24px;
   margin-right: 10px;
+}
+#search img:hover{
+  cursor:pointer;
 }
 
 #search input {
@@ -32,6 +37,9 @@
   outline: none;
   border: none;
   color: black;
+}
+#search:hover{
+  background-color:rgb(230, 230, 230);
 }
 
 #search input::placeholder {
@@ -92,8 +100,8 @@
 }
 
 #cityName {
-  margin-top: 40px;
-  font-size: 30px;
+  margin-top: 30px;
+  font-size: 20px;
   color: rgb(99, 99, 99);
   display:flex;
   justify-content: center;

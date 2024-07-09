@@ -1,13 +1,13 @@
 import '../styles/mainforecast.css'
 import { useState } from 'react';
 
-export default function MainForecast({temp,update,sky,location,time}){
+export default function MainForecast({temp,update,sky,address,time,rain}){
   const [currCity,setCity]=useState(null);
   const searchClick=()=>{
     update(currCity);
   };
 
-  let date=new Date(time)
+  let date=new Date(time*1000)
   let dayIndex=date.getDay()
   const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let day=daysOfWeek[dayIndex]
@@ -37,14 +37,14 @@ export default function MainForecast({temp,update,sky,location,time}){
     </div>
     <div id="weather">
       <img src={"cloud.svg"} alt="" />
-      <p>{String(sky).toUpperCase()}</p>
+      <p>{sky}</p>
     </div>
     <div id="rain">
       <img src={"water.svg"} alt="" />
-      <p>Rain-30%</p>
+      <p>Rain-{rain}%</p>
     </div>
     <div id="cityName">
-      <p>{location}</p>
+      <p>{address}</p>
       <img src={"pin.svg"} alt="" />
     </div>
     </div>

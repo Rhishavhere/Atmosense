@@ -1,8 +1,14 @@
 #otherforecast{
   display:flex;
-  flex:3;
-  background-color: aliceblue;
+  flex-direction:column;
+  flex:8;
+  background-color: rgb(233, 233, 233);
   color:black;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+}
+#otherforecast h4{
+  font-family:poppins;
+  font-weight:500;
+  text-align:start;
+  margin-left:40px;
+  margin-top:50px;
 }

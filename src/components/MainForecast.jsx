@@ -12,9 +12,6 @@ export default function MainForecast(){
     <div id="sky-icon">
       <img src={'sun and rain.svg'} alt="" />
     </div>
-    <div id="cityName">
-      <p>New York, NY, USA</p>
-    </div>
     <div id="temperature">
       12<sup>&deg;C</sup>
     </div>
@@ -29,6 +26,10 @@ export default function MainForecast(){
     <div id="rain">
       <img src={"water.svg"} alt="" />
       <p>Rain-30%</p>
+    </div>
+    <div id="cityName">
+      <p>New York</p>
+      <img src={"pin.svg"} alt="" />
     </div>
     </div>
   )

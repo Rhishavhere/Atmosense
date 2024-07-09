@@ -1,7 +1,7 @@
 #mainforecast {
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(255, 255, 255);
   display: flex;
-  flex: 1;
+  flex: 2;
   flex-direction: column;
   margin: 0;
   padding: 10px 10px 10px 10px;
@@ -20,7 +20,7 @@
 }
 
 #search img {
-  width: 20px;
+  width: 24px;
   margin-right: 10px;
 }
 
@@ -38,9 +38,9 @@
 }
 
 #sky-icon img {
-  width: 120px;
+  width: 160px;
   margin-bottom: 30px;
-  margin-top: -20px;
+  margin-top: 20px;
 }
 
 #temperature {
@@ -57,7 +57,7 @@
   justify-content: center;
   gap: 8px;
   margin-top: -20px;
-  margin-bottom: 10px;
+  margin-bottom: 60px;
 }
 
 #date p:nth-child(2) {
@@ -66,7 +66,7 @@
 
 #weather {
   display: flex;
-  margin-left: -50px;
+  margin-left: 0px;
   justify-content: center;
   gap: 10px;
   color: rgb(48, 48, 48);
@@ -78,7 +78,7 @@
 
 #rain {
   display: flex;
-  margin-left: -86px;
+  margin-left: -38px;
   justify-content: center;
   gap: 15px;
   margin-top: -20px;
@@ -91,7 +91,17 @@
 }
 
 #cityName {
-  margin-top: -20px;
-  font-size: 20px;
+  margin-top: 40px;
+  font-size: 30px;
   color: rgb(99, 99, 99);
+  display:flex;
+  justify-content: center;
+  gap:10px;
+}
+#cityName img{
+  width:30px;
+}
+#cityName img:hover{
+  transform:scale(1.1);
+  cursor:pointer;
 }

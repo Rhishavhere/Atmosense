@@ -1,0 +1,14 @@
+#pinnedsection{
+  background-color: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  flex:1.5;
+  background-color: rgb(233, 233, 233);
+}
+#pin-div{
+  color:rgb(53, 53, 53);
+  background-color: white;
+  height:95%;
+  margin-right:15px;
+  border-radius:15px;
+}

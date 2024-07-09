@@ -1,0 +1,29 @@
+#topsection{
+  display:flex;
+  justify-content: center;
+  gap:20px;
+  margin:10px 60px 10px 60px;
+}
+
+#cards{
+  font-family:poppins;
+  font-weight:500;
+  background-color:rgb(255, 255, 255);
+  width:130px;
+  border-radius:20px;
+  box-shadow: rgba(0, 0, 0, 0.116) -4px 10px 10px;
+  transition: 0.1s ease-in;
+}
+#cards:hover{
+  transform:scale(1.01);
+  box-shadow: rgba(0, 0, 0, 0.199) -4px 10px 10px;
+}
+#cards img{
+  width:50px;
+}
+#cards p:last-child{
+  font-weight:400;
+}
+#cards p span{
+  color:rgb(80, 80, 80);
+}

@@ -2,7 +2,7 @@ import '../styles/mainforecast.css'
 import { useState } from 'react';
 
 export default function MainForecast({temp,update,sky,
-  address,time,rain,icon
+  address,time,rain,icon,unit
 }){
   const [currCity,setCity]=useState(null);
   
@@ -15,6 +15,7 @@ export default function MainForecast({temp,update,sky,
   const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let day=daysOfWeek[dayIndex]
  
+  let tempunit=!unit?'C':'F'
 
   let hours=date.getHours()
   let minutes=date.getMinutes()
@@ -32,7 +33,7 @@ export default function MainForecast({temp,update,sky,
       <img src={icon+`.svg`} alt="" />
     </div>
     <div id="temperature">
-      {temp}<sup>&deg;C</sup>
+      {temp}<sup>&deg;{tempunit}</sup>
     </div>
     <div id="date">
       <p>{day}</p>

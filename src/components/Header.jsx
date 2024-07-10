@@ -2,15 +2,23 @@
 import '../styles/header.css'
 
 
-export default function Header({temp}){
+export default function Header({temp,changeType,type}){
   const temp2=()=>{
     temp();
   }
+
+  function changeTypeToday(){
+    changeType(true)
+  }
+  function changeTypeWeek(){
+    changeType(false)
+  }
+  
   return(
     <div id="header">
       <div id="left">
-        <p>Today</p>
-        <p>Week</p>
+        <p onClick={changeTypeToday} className={type?"selected":null}  >Today</p>
+        <p onClick={changeTypeWeek}  className={!type?"selected":null} >Week</p>
       </div>
       <div id="right">
         

@@ -79,12 +79,17 @@ function App() {
 
       day1: new Date(data.days[1].datetimeEpoch).getDay(),
 
+      temps: data.days[0].hours.map(hour => hour.temp)
+
 
 
 
     });
-
+    
+    
   };
+
+
   useEffect(() => {
     // console.log(searchCity);
     search();

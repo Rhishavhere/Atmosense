@@ -1,5 +1,7 @@
 import Cards from "./Cards";
+import Charts from "./Charts";
 import "../styles/topsection.css"
+import "../styles/chart.css"
 export default function TopSection({
   day1max,
   day2max,
@@ -23,6 +25,9 @@ export default function TopSection({
   day6icon,
   day7icon,
   day1,
+  type,
+  hours,
+  temps,
 
 }){
 
@@ -35,50 +40,58 @@ export default function TopSection({
   let day6Name=daysOfWeek[day1+6]
   let day7Name=daysOfWeek[day1+7]
 
+
+  let content= !type? (  <> <Cards 
+    max={day1max}
+    min={day1min}
+   icon={day1icon}
+    day={day1Name}
+ ></Cards>
+ <Cards 
+    max={day2max}
+    min={day2min}
+   icon={day2icon}
+   day={day2Name}
+ ></Cards>
+ <Cards 
+    max={day3max}
+    min={day3min}
+   icon={day3icon}
+   day={day3Name}
+ ></Cards>
+ <Cards 
+    max={day4max}
+    min={day4min}
+   icon={day4icon}
+   day={day4Name}
+ ></Cards>
+ <Cards 
+    max={day5max}
+    min={day5min}
+   icon={day5icon}
+   day={day5Name}
+ ></Cards>
+ <Cards 
+    max={day6max}
+    min={day6min}
+   icon={day6icon}
+   day={day6Name}
+ ></Cards>
+ <Cards 
+    max={day7max}
+    min={day7min}
+   icon={day7icon}
+   day={day7Name}
+ ></Cards></> ) :
+ (
+  <div id="chart-div">
+  <Charts hours={hours} temps={temps} ></Charts>
+  </div>
+ )
+
   return(
     <div id="topsection">
-    <Cards 
-       max={day1max}
-       min={day1min}
-      icon={day1icon}
-       day={day1Name}
-    ></Cards>
-    <Cards 
-       max={day2max}
-       min={day2min}
-      icon={day2icon}
-      day={day2Name}
-    ></Cards>
-    <Cards 
-       max={day3max}
-       min={day3min}
-      icon={day3icon}
-      day={day3Name}
-    ></Cards>
-    <Cards 
-       max={day4max}
-       min={day4min}
-      icon={day4icon}
-      day={day4Name}
-    ></Cards>
-    <Cards 
-       max={day5max}
-       min={day5min}
-      icon={day5icon}
-      day={day5Name}
-    ></Cards>
-    <Cards 
-       max={day6max}
-       min={day6min}
-      icon={day6icon}
-      day={day6Name}
-    ></Cards>
-    <Cards 
-       max={day7max}
-       min={day7min}
-      icon={day7icon}
-      day={day7Name}
-    ></Cards>
+      {content}
    
     </div>
   )

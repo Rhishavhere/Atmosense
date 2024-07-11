@@ -1,10 +1,10 @@
-export default function Pins(){
+export default function Pins({location}){
   return(
     <div id="pins">
-      <p>New York</p>
+      <p>{location.address}</p>
       <div>
-        <p>15&deg;</p>
-        <p>9&deg;</p>
+        <p>{location.max}&deg;</p>
+        <p>{location.min}&deg;</p>
       </div>
     </div>
   )

@@ -14,6 +14,9 @@ function App() {
   const [weather, setWeather] = useState()
   const [searchCity, setCity] = useState("Delhi");
   const [unit, setUnit] = useState(false)
+  const [pinnedLocations,setPinnedLocations]=useState([])
+
+
 
 
   const search = async () => {
@@ -53,6 +56,7 @@ function App() {
 
       icon: data.currentConditions.icon,
 
+      day0max: data.days[0].tempmax,
       day1max: data.days[1].tempmax,
       day2max: data.days[2].tempmax,
       day3max: data.days[3].tempmax,
@@ -61,6 +65,7 @@ function App() {
       day6max: data.days[6].tempmax,
       day7max: data.days[7].tempmax,
 
+      day0min: data.days[0].tempmin,
       day1min: data.days[1].tempmin,
       day2min: data.days[2].tempmin,
       day3min: data.days[3].tempmin,
@@ -88,6 +93,17 @@ function App() {
     
     
   };
+
+  const addPinnedLocation=(location)=>{
+    if(!pinnedLocations.some(pin=>pin.address===location.address)){
+      setPinnedLocations([...pinnedLocations,{
+        address:weather.address,
+        max:weather.day0max,
+        min:weather.day0min
+      }])
+    }
+  }
+
 
 
   useEffect(() => {
@@ -117,10 +133,14 @@ function App() {
       <MainForecast
         {...weather}
         update={updateCity}
-        unit={unit} ></MainForecast>
+        unit={unit} 
+        addPinnedLocation={addPinnedLocation}
+        ></MainForecast>
       <OtherForecast w={weather} changeUnit={updateUnit}
       unit={unit} ></OtherForecast>
-      <PinnedSection></PinnedSection>
+      <PinnedSection
+        pinnedLocations={pinnedLocations}
+      ></PinnedSection>
 
     </div>
   )

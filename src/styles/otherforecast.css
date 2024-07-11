@@ -4,6 +4,7 @@
   flex:8;
   background-color: rgb(233, 233, 233);
   color:black;
+  min-height:90vh;
   
 }
 #otherforecast h4{

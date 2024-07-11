@@ -1,10 +1,12 @@
 export default function Pins({location}){
   return(
     <div id="pins">
-      <p>{location.address}</p>
-      <div>
-        <p>{location.max}&deg;</p>
-        <p>{location.min}&deg;</p>
+      <div id="pinmain"> 
+        <p>{(location.address).split(',')[0]}</p>
+        <p>{location.max}&deg; <span>{location.min}&deg;</span></p>
+      </div>
+      <div id="pininfo">
+        {location.sky}
       </div>
     </div>
   )

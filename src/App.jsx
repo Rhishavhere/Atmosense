@@ -84,9 +84,9 @@ function App() {
 
       day1: new Date(data.days[1].datetimeEpoch).getDay(),
 
-      temps: data.days[0].hours.map(hour => hour.temp)
+      temps: data.days[0].hours.map(hour => hour.temp),
 
-
+      day0sky: data.days[0].conditions,
 
 
     });
@@ -99,7 +99,8 @@ function App() {
       setPinnedLocations([...pinnedLocations,{
         address:weather.address,
         max:weather.day0max,
-        min:weather.day0min
+        min:weather.day0min,
+        sky:weather.day0sky
       }])
     }
   }

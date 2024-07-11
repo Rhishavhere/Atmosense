@@ -14,7 +14,7 @@ export default function Charts({hours,temps}){
         {
           data:series,
           // area:true,
-          color: 'grey'
+          color: '#39a2e2'
           
         },
       ]}

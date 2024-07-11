@@ -15,6 +15,7 @@ export default function OtherForecast({w,changeUnit,unit}){
 
   return(
     <div id="otherforecast">
+      <img id= "world" src={"worldmap.svg"} alt="" />
     <Header temp={temp} changeType={setType} type={type} ></Header>
    
     <TopSection {...w} type={type} ></TopSection>

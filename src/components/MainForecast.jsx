@@ -2,7 +2,7 @@ import '../styles/mainforecast.css'
 import { useState } from 'react';
 
 export default function MainForecast({temp,update,sky,
-  address,time,rain,icon,unit
+  address,time,rain,icon,unit,addPinnedLocation
 }){
   const [currCity,setCity]=useState(null);
   
@@ -49,7 +49,9 @@ export default function MainForecast({temp,update,sky,
     </div>
     <div id="cityName">
       <p>{address}</p>
-      <img src={"pin.svg"} alt="" />
+      <img src={"pin.svg"} alt="" 
+        onClick={addPinnedLocation}
+      />
     </div>
     </div>
   )

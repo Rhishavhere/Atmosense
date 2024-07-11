@@ -5,6 +5,7 @@
   flex:2;
   background-color: rgb(233, 233, 233);
   font-family:poppins;
+  min-height:90vh;
 }
 #pin-div{
   color:rgb(53, 53, 53);
@@ -26,12 +27,16 @@
 }
 
 #pins{
+  box-sizing: border-box;
   display:flex;
   justify-content: space-around;
+  gap:20px;
   align-items: center;
   background-color: rgb(219, 219, 219);
   border-radius:15px;
-  height:50px;
+  min-width:max-content;
+  width:auto;
+  height:60px;
   margin:0px 20px 16px 20px;
   padding: 10px 10px 10px 10px;
   line-height: 8px;
@@ -42,4 +47,7 @@
 #pins div p:last-child{
   font-weight:500; 
   color:rgb(112, 112, 112);
+}
+#nothing p{
+  color:black;
 }

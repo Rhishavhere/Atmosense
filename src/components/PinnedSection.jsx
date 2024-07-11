@@ -1,7 +1,24 @@
 import '../styles/pinnedsection.css'
 import Pins from './Pins'
 
-export default function PinnedSection(){
+export default function PinnedSection({pinnedLocations}){
+  
+
+  let showpins=(pinnedLocations.length==0)? 
+  <p style={{
+    // width:"200px",
+    // textAlign:"center",
+    margin:'100px 50px 50px 50px',
+    color:"grey",
+    fontStyle:"italic"
+    }}>Nothing to show here at this moment. Please add some pins.</p> :
+    (<>
+    {pinnedLocations.map((location,index)=>(
+      <Pins key={index} location={location} ></Pins>
+    ))}</>)
+
+  
+  
   return(
     <div id="pinnedsection">
       
@@ -10,10 +27,7 @@ export default function PinnedSection(){
         <p>Pinned Locations</p>
         <img src={"arrow down.svg"} alt="" />
         </div>
-
-        <Pins></Pins>
-        <Pins></Pins>
-        <Pins></Pins>
+          {showpins}
 
       </div>
 

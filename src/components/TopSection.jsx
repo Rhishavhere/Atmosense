@@ -40,7 +40,7 @@ export default function TopSection({
   let day6Name=daysOfWeek[day1+6]
   let day7Name=daysOfWeek[day1+7]
 
-
+  
   let content= !type? (  <> <Cards 
     max={day1max}
     min={day1min}

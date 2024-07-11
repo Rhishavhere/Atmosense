@@ -14,7 +14,8 @@
   z-index: -100;
   top:10vh;
   left:10vw;
-  transform:scale(1.2)
+  transform:scale(1.2);
+  opacity:0.7;
 }
 #otherforecast h4{
   font-family:poppins;

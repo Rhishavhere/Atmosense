@@ -11,7 +11,7 @@
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   min-height:90vh;
-
+  z-index:1;
   
 }
 
@@ -22,6 +22,8 @@
   height:30px;
   border-radius:50px;
   background-color:rgb(216, 216, 216);
+  outline:10px solid rgba(207, 207, 207, 0);
+  transition:0.2s ease-in-out;
 }
 
 #search img {
@@ -30,6 +32,9 @@
 }
 #search img:hover{
   cursor:pointer;
+}
+#search:hover{
+  outline:10px solid rgba(207, 207, 207, 0.219);
 }
 
 #search input {
@@ -105,21 +110,24 @@
   align-items: center;
   margin: 30px 40px 0px 40px;
   /* max-width:250px; */
-  font-size: 24px;
+  font-size: 20px;
   color: rgb(241, 224, 192);
   display:flex;
   justify-content: center;
 }
 #cityName img{
   width:30px;
-  transition: 0.1s ease-in-out;
+  transition: 0.2s ease-in-out;
+  border-radius: 30px;
+  outline:2px solid rgb(182, 182, 182);
 }
 #cityName img:hover{
   transform:scale(1.3);
   cursor:pointer;
+  outline:5px solid rgba(207, 207, 207, 0.164);
 }
 #info{
-  margin-top:60px;
+  margin-top:50px;
   color:rgb(160, 160, 160);
   font-size:12px;
   font-style:italic;

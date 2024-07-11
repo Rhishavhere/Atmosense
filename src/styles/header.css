@@ -16,6 +16,14 @@
   color:black;
   font-weight:500;
   border-bottom:2px solid black;
+  padding:0px 10px 0px 10px;
+}
+.notSelected{
+  border-radius:10px;
+  padding:0px 10px 0px 10px;
+}
+.notSelected:hover{
+  background-color: rgb(207, 207, 207);
 }
 #left:hover{
   cursor:pointer;

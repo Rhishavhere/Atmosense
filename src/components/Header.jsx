@@ -17,8 +17,8 @@ export default function Header({temp,changeType,type}){
   return(
     <div id="header">
       <div id="left">
-        <p onClick={changeTypeToday} className={type?"selected":null}  >Today</p>
-        <p onClick={changeTypeWeek}  className={!type?"selected":null} >Week</p>
+        <p onClick={changeTypeToday} className={type?"selected":"notSelected"}  >Today</p>
+        <p onClick={changeTypeWeek}  className={!type?"selected":"notSelected"} >Week</p>
       </div>
       <div id="right">
         

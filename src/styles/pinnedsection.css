@@ -1,19 +1,23 @@
 #pinnedsection{
-  background-color: white;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   flex:2;
-  background-image: linear-gradient(to top, #b7ccda 0%, #e2ebf0 100%);
+  background: linear-gradient(to top, #9bc4dd , #e2ebf0 );
   font-family:poppins;
   min-height:90vh;
   z-index:2;
 }
+
+
 #pin-div{
   color:rgb(53, 53, 53);
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.788);
   height:95%;
+  margin-top:20px;
   margin-right:20px;
   border-radius:15px;
+  position:relative;
+  overflow: hidden;
 }
 #pintop{
   display:flex;
@@ -38,6 +42,7 @@
   margin:0px 20px 16px 20px;
   padding: 0px 10px 10px 10px;
   line-height: 8px;
+  z-index:6;
 }
 #pinmain{
   display:flex;
@@ -71,4 +76,11 @@
 }
 #nothing p{
   color:black;
+}
+#globe{
+  width:500px;
+  position:absolute;
+  top:45%;
+  left:10%;
+  opacity:0.3;
 }

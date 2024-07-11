@@ -2,12 +2,13 @@
   display:flex;
   flex-direction:column;
   flex:8;
-  background-image: linear-gradient(to top, #b6cddb 0%, #e2ebf0 100%);
+  background: linear-gradient(to top, #9bc4dd , #e2ebf0 );
   color:black;
   min-height:90vh;
   position:relative;
   z-index:0;
 }
+
 #world{
   position:absolute;
   z-index: -100;

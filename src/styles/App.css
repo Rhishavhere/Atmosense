@@ -1,8 +1,8 @@
 #root {
   /* display:flex;
   justify-content: center; */
-  margin: 30px 30px 30px 30px ;
-  /* padding: 0.5rem; */
+  margin: 0;;
+  padding: 30px;
   text-align: center;
   overflow:hidden;
   /* height:auto; */
@@ -12,4 +12,13 @@
   padding:0;
   display:flex;
   justify-content:space-between;
+  box-shadow:  2px 5px 14px #000000ef;
+             /* -2px -2px 14px #e0e0e0b7; */
+  border-radius:20px;
+}
+body{
+  margin:0;
+  padding:0;
+  height:100vh;
+  background-color: #464646;
 }

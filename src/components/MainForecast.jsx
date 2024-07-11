@@ -53,6 +53,7 @@ export default function MainForecast({temp,update,sky,
         onClick={addPinnedLocation}
       />
     </div>
+    <div id="info">click on Today to see hourly graph</div>
     </div>
   )
 }

@@ -3,15 +3,16 @@
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   flex:2;
-  background-color: rgb(233, 233, 233);
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   font-family:poppins;
   min-height:90vh;
+
 }
 #pin-div{
   color:rgb(53, 53, 53);
   background-color: white;
   height:95%;
-  margin-right:15px;
+  margin-right:20px;
   border-radius:15px;
 }
 #pintop{

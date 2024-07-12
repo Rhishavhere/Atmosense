@@ -1,5 +1,5 @@
 // used visual crossing weather api
-
+import { motion } from 'framer-motion';
 
 import MainForecast from './components/MainForecast'
 import OtherForecast from './components/OtherForecast'

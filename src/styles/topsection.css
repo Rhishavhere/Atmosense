@@ -1,10 +1,14 @@
 #topsection{
+  /* display:flex;
+  justify-content: center;
+  gap:20px; */
+  margin:10px 60px 20px 60px;
+}
+#cards-section{
   display:flex;
   justify-content: center;
   gap:20px;
-  margin:10px 60px 20px 60px;
 }
-
 #cards{
   font-family:poppins;
   font-weight:500;

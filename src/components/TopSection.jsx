@@ -2,6 +2,7 @@ import Cards from "./Cards";
 import Charts from "./Charts";
 import "../styles/topsection.css"
 import "../styles/chart.css"
+import { AnimatePresence, motion } from "framer-motion";
 export default function TopSection({
   day1max,
   day2max,
@@ -41,7 +42,13 @@ export default function TopSection({
   let day7Name=daysOfWeek[day1+7]
 
   
-  let content= !type? (  <> <Cards 
+  let content= !type? (  <motion.div id="cards-section"
+    initial={{y:50,opacity:0}}
+    animate={{y:0,opacity:1}}
+    exit={{y:50,opacity:0}}
+    transition={{type:'spring',duration:1}}
+  
+  > <Cards 
     max={day1max}
     min={day1min}
    icon={day1icon}
@@ -82,17 +89,30 @@ export default function TopSection({
     min={day7min}
    icon={day7icon}
    day={day7Name}
- ></Cards></> ) :
+ ></Cards></motion.div> ) :
  (
-  <div id="chart-div">
+  <motion.div id="chart-div"
+    initial={{y:50,opacity:0}}
+    animate={{y:0,opacity:1}}
+    exit={{y:50,opacity:0}}
+    transition={{type:'spring',duration:1}}
+  >
   <Charts hours={hours} temps={temps} ></Charts>
-  </div>
+  </motion.div>
  )
 
   return(
-    <div id="topsection">
+    <AnimatePresence>
+    <motion.div id="topsection"
+      initial={{y:50,opacity:0}}
+      animate={{y:0,opacity:1}}
+      exit={{y:50,opacity:0}}
+      transition={{type:'spring',duration:2,delay:0.6}}
+    
+    >
       {content}
    
-    </div>
+    </motion.div>
+    </AnimatePresence>
   )
 }

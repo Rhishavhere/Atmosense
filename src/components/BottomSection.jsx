@@ -1,5 +1,6 @@
 // import Highlights from "./Highlights"
 import '../styles/bottomsection.css'
+import { motion } from 'framer-motion'
 
 export default function BottomSection({ uv, visibility,
   windSpeed, windDir, humidity, pressure, sunrise, sunset,
@@ -10,7 +11,12 @@ export default function BottomSection({ uv, visibility,
 
   return (
     <>
-      <div id="bottomsection">
+      <motion.div id="bottomsection"
+       
+        initial={{y:-50,opacity:0}}
+        animate={{y:0,opacity:1}}
+        transition={{type:'spring',duration:2,delay:0.5}}
+      >
         <div className="highlight">
           <div id="circle"></div>
           <p>UV Index</p>
@@ -44,8 +50,12 @@ export default function BottomSection({ uv, visibility,
           </div>
 
         </div>
-      </div>
-      <div id="bottomsection">
+      </motion.div>
+      <motion.div id="bottomsection"
+        initial={{y:-50,opacity:0}}
+        animate={{y:0,opacity:1}}
+        transition={{type:'spring',duration:2,delay:0.6}}
+      >
         <div className="highlight">
           <div id="circle"></div>
           <p>Humidity</p>
@@ -71,7 +81,7 @@ export default function BottomSection({ uv, visibility,
           {/* <p>Percent</p> */}
         </div>
 
-      </div>
+      </motion.div>
     </>
   )
 }

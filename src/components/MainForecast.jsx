@@ -1,5 +1,6 @@
 import '../styles/mainforecast.css'
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function MainForecast({temp,update,sky,
   address,time,rain,icon,unit,addPinnedLocation
@@ -22,7 +23,11 @@ export default function MainForecast({temp,update,sky,
 
 
   return(
-    <div id="mainforecast"> 
+    <motion.div id="mainforecast"
+      initial={{scale:1.1,x:-100,opacity:0}}
+      animate={{scale:1,x:0,opacity:1}}
+      transition={{type:'spring',duration:3}}
+    > 
    
     <div id="search">
       <img src={'search-button.svg'} alt="" onClick={()=>searchClick()}/>
@@ -54,6 +59,6 @@ export default function MainForecast({temp,update,sky,
       />
     </div>
     <div id="info">click on Today to see hourly graph</div>
-    </div>
+    </motion.div>
   )
 }
